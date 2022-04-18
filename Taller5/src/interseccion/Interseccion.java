@@ -20,18 +20,18 @@ public class Interseccion {
      */
     public static void main(String[] args) {
         try {
-            Comparable[] a = {1, 2, 3 ,4};
-            Comparable[] b = {3, 4, 5, 6};
+            Comparable[] a = {"A", "B", "C" ,"D"};
+            Comparable[] b = {"B", "C", "H", "I"};
             
             Comparable[] c = {3, 5, 1, 7};
             Comparable[] d = {2, 1, 8, 7, 3};
             
-            Taller5 conjuntoOrdenado = new Taller5(a, b);
-            Taller5 conjuntoNoOrdenado = new Taller5(c, d);
+            StdOut.println(Taller5.interseccionOrdenados(a, b));
+            StdOut.println(Taller5.interseccionNoOrdenados(c, d));
             
-            StdOut.println(conjuntoOrdenado.interseccionOrdenados());
-            StdOut.println(conjuntoNoOrdenado.interseccionNoOrdenados());
+            Long tiempo = System.currentTimeMillis();
             
+            StdOut.print(tiempo);
         } catch (Exception error){
             StdOut.print("An error has been ocurred. Code: " + error);
         }
