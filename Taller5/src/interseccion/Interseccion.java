@@ -7,7 +7,7 @@ package interseccion;
 import edu.princeton.cs.algs4.StdOut;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List; 
+import java.util.List;
 
 /**
  *
@@ -20,21 +20,22 @@ public class Interseccion {
      */
     public static void main(String[] args) {
         try {
-            Comparable[] a = {"A", "B", "C" ,"D"};
-            Comparable[] b = {"B", "C", "H", "I"};
+            Comparable[] a = {"A", "B", "C", "H"};
+            Comparable[] b = {"B", "C", "H"};
             
             Comparable[] c = {3, 5, 1, 7};
             Comparable[] d = {2, 1, 8, 7, 3};
             
+            Comparable[] e = {"A", "B", "C"};
+            Comparable[] f = {"B", "C", "H"};
+
             StdOut.println(Taller5.interseccionOrdenados(a, b));
+            StdOut.println(Taller5.interseccionOrdenados(e, f));
             StdOut.println(Taller5.interseccionNoOrdenados(c, d));
             
-            Long tiempo = System.currentTimeMillis();
-            
-            StdOut.print(tiempo);
-        } catch (Exception error){
+        } catch (Exception error) {
             StdOut.print("An error has been ocurred. Code: " + error);
         }
     }
-    
+
 }
