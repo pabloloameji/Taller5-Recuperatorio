@@ -28,10 +28,12 @@ public class Interseccion {
             
             Comparable[] e = {"A", "B", "C"};
             Comparable[] f = {"B", "C", "H"};
-
+            
             StdOut.println(Taller5.interseccionOrdenados(a, b));
             StdOut.println(Taller5.interseccionOrdenados(e, f));
             StdOut.println(Taller5.interseccionNoOrdenados(c, d));
+            
+            
             
         } catch (Exception error) {
             StdOut.print("An error has been ocurred. Code: " + error);

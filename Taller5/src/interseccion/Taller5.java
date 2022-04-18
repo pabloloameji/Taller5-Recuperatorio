@@ -15,6 +15,7 @@ import java.util.List;
 public class Taller5 {
 
 //    Propuesta 1 (es cuadratrica pero no quedo muy seguro)
+//    pensando en el peor caso(qeu no compartan ningun dato) si queda cuadratica
 //    public static List<Comparable> interseccionOrdenados(Comparable[] a, Comparable[] b) {
 //        List<Comparable> interseccion = new ArrayList<Comparable>();
 //        for(Comparable i: a) {
@@ -36,13 +37,25 @@ public class Taller5 {
         int i = 0;
         int j = 0;
 
-        while (i < a.length) {
-            if (b[j].compareTo(a[i]) > 0) i++;
-            if (b[j].compareTo(a[i]) < 0) j++;
-            if (b[j].compareTo(a[i]) == 0) {
-                interseccion.add(b[j]);
-                j++;
-                i++;
+        if (b.length > a.length || b.length == a.length) {
+            while (i < a.length) {
+                if (b[j].compareTo(a[i]) > 0) i++;
+                if (b[j].compareTo(a[i]) < 0) j++;
+                if (b[j].compareTo(a[i]) == 0) {
+                    interseccion.add(b[j]);
+                    j++;
+                    i++;
+                }
+            }
+        } else if (a.length > b.length) {
+            while (j < b.length) {
+                if (a[i].compareTo(b[j]) > 0) j++;
+                if (a[i].compareTo(b[j]) < 0) i++;
+                if (a[i].compareTo(b[j]) == 0) {
+                    interseccion.add(a[i]);
+                    j++;
+                    i++;
+                }
             }
         }
 
